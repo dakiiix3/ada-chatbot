@@ -1,0 +1,44 @@
+<ActionBar class="action-bar">
+    <!--
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!--
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
+    </ActionItem>
+    <Label class="action-bar-title" text="Ada"></Label>
+</ActionBar>
+
+<GridLayout class="page" rows="*, 78" columns="*">
+    <ScrollView #scrollView col="0" row="0">
+        <ListView #listView [items]="messages" class="chat-container">
+            <ng-template let-item="item">
+                <GridLayout rows="auto" columns="auto, * auto" height="auto" borderColor="white" (onLongPress)="playMessage(item.text)">
+                    <StackLayout [col]="isRight(item.isRight) ? '2' : '0'" row="0" width="280" [horizontalAlignment]="isRight(item.isRight) ? 'right' : 'left'" [marginLeft]="isRight(item.isRight) ? 0 : 8" [marginRight]="isRight(item.isRight) ? 8 : 0" [backgroundColor]="isRight(item.isRight) ? '#ccffcc' : '#cceeff'"
+                        style="border-width: 0;" [class.border-radius-left]="!isRight(item.isRight)" [class.border-radius-right]="isRight(item.isRight)" marginTop="4" marginBottom="4">
+                        <Label [text]="item.text" style="color: #000033;" textWrap="true" marginLeft="8" marginRight="8" marginTop="4"></Label>
+                        <Label [text]="item.date" style="font-size: 10; color: #595959" marginRight="8" marginBottom="4" horizontalAlignment="right"></Label>
+                    </StackLayout>
+                </GridLayout>
+            </ng-template>
+        </ListView>
+    </ScrollView>
+    <!-- Eingabefeld -->
+    <StackLayout col="0" row="1" height="78" backgroundColor="#e6e6e6">
+        <GridLayout columns="*, 60" rows="66" marginBottom="6" marginTop="6">
+            <TextView #inputmessage [(ngModel)]="message.text" (onFocus)="callback('focus')" row="0" col="0" class="input" wrapLine="true" returnKeyType="done" (tap)="focusTextField()"></TextView>
+            <GridLayout col="1" row="0" columns="50" height="44" class="icon-button" marginRight="8" marginLeft="8" (tap)="handleRecognition()" [visibility]="inputLength() === 0 ? 'visible' : 'collapsed'">
+                <Label text="&#xf131;" row="0" col="0" width="44" class="fas icon-button-text" color="red" [visibility]="listening === LISTENING ? 'visible' : 'collapsed'"></Label>
+                <Label text="&#xf130;" row="0" col="0" width="44" class="fas icon-button-text" [visibility]="listening === NOT_LISTENING ? 'visible' : 'collapsed'"></Label>
+            </GridLayout>
+            <GridLayout col="1" row="0" columns="50" height="44" class="icon-button" marginRight="8" marginLeft="8" [visibility]="inputLength() > 0 ? 'visible' : 'collapsed'" (tap)="onKeyboardTap()">
+                <Label text="&#xf0da;" row="0" col="0" width="44" class="fas icon-button-text"></Label>
+            </GridLayout>
+        </GridLayout>
+    </StackLayout>
+</GridLayout>

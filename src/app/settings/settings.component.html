@@ -1,0 +1,42 @@
+<ActionBar class="action-bar">
+    <!--
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!--
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
+    </ActionItem>
+    <Label #lblSettingsBar class="action-bar-title" text="Settings"></Label>
+</ActionBar>
+
+<ScrollView class="page">
+    <StackLayout class="home-panel form input-field">
+        <GridLayout rows="auto, auto, auto" columns="*" height="auto">
+
+            <GridLayout col="0" row="0" columns="*, *" rows="35" class="ml-8 mr-8 mt-8">
+                <Label row="0" col="0" #lblVoice [text]="'settings.voice' | language" class="label"></Label>
+                <Switch row="0" col="1" #speech checked="false" [(ngModel)]="bool"></Switch>
+            </GridLayout>
+
+            <GridLayout col="0" row="1" columns="*, *" rows="35" class="ml-8 mr-8 mt-8">
+                <Label row="0" col="0" #lblCount [text]="'settings.messages' | language" class="label"></Label>
+                <Label row="0" col="1" #count class="label"></Label>
+            </GridLayout>
+
+            <GridLayout col="0" row="2" columns="*, *" rows="35" class="ml-8 mr-8 mt-8">
+                <Label row="0" col="0" #lblLanguage [text]="'settings.language' | language" class="label"></Label>
+                <Label row="0" col="1" #language (tap)="changeLanguage()" class="label"></Label>
+            </GridLayout>
+        </GridLayout>
+
+        <GridLayout rows="auto" columns="*, *" height="auto" borderColor="white">
+            <Button col="0" row="0" #btnDelete [text]="'settings.delete-data' | language" (tap)="confirmDelete()" class="button"></Button>
+            <Button col="1" row="0" #btnSettings [text]="'settings.save' | language" (tap)="saveSettings()" class="button"></Button>
+        </GridLayout>
+    </StackLayout>
+</ScrollView>

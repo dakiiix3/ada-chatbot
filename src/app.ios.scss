@@ -1,0 +1,110 @@
+// Import app variables
+@import 'app-variables';
+// Import the theme’s main ruleset - both index and platform specific.
+@import '~nativescript-theme-core/scss/index';
+@import '~nativescript-theme-core/scss/platforms/index.android';
+// Import common styles
+@import 'app-common';
+// Place any CSS rules you want to apply only on Android here
+ActionBar .fa {
+    padding: 40px;
+}
+
+
+/*
+    File name: fa-regular-400.ttf
+    Font name: Font Awesome 5 Free
+*/
+
+.fa {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+    font-weight: 400;
+    // font-family: "Font Awesome 5 Free Solid", "fa-regular-900";
+    // font-weight: 900;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+    font-weight: 900;
+}
+
+.input {
+    border-radius: 8;
+    border-color: black;
+    border-width: 1;
+    margin-left: 8;
+    // margin-bottom: 1;
+    // margin-top: 1;
+    background-color: white;
+}
+
+.icon-button {
+    border-radius: 100;
+    border-color: black;
+    border-width: 1;
+    background-color: white;
+}
+
+.icon-button-text {
+    text-align: center;
+    vertical-align: center;
+    margin-right: 8;
+    font-size: 24px;
+}
+
+.border-radius-left {
+    border-radius: 4 16 16 16;
+}
+
+.border-radius-right {
+    border-radius: 16 4 16 16;
+}
+
+.button {
+    border-radius: 4;
+    border-width: 2;
+    border-color: gray;
+    background-color: white;
+    color: black;
+    margin-left: 8;
+    margin-right: 8;
+    margin-top: 2;
+    margin-bottom: 2;
+}
+
+.ml-8 {
+    margin-left: 8;
+}
+
+.mr-8 {
+    margin-right: 8;
+}
+
+.mt-8 {
+    margin-top: 8;
+}
+
+.mb-8 {
+    margin-bottom: 8;
+}
+
+.label {
+    font-size: 14;
+    color: black;
+}
+
+.switch {
+    off-background-color: lightgray;
+    background-color: blue;
+}
+
+
+/*
+    File name: fa-solid-900.ttf
+    Font name: Font Awesome 5 Free
+*/
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+    font-weight: 900;
+}

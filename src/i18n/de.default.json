@@ -1,0 +1,31 @@
+{
+    "app.name": "Ada",
+    "error": {
+        "connection": "Ich kann dir leider nicht antworten. Du musst dich wieder mit dem Internet verbinden. Erst dann kann ich wieder deine Anfragen beantworten."
+    },
+    "messages": {
+        "welcome": "Hey, ich bin Ada, dein persönlicher Assistent während  der Zustellung. Wie kann ich dir weiterhelfen? Halte eine Nachricht länger gedrückt, um sie vorgelesen zu bekommen.",
+        "new": "Neue Nachricht!"
+    },
+    "settings": {
+        "voice": "Sprachausgabe",
+        "messages": "Anzahl der Nachrichten",
+        "language": "Sprache",
+        "delete-data": "Daten löschen",
+        "save": "speichern",
+        "select-language": "Sprache auswählen",
+        "confirm-delete": "Löschen bestätigen",
+        "question-delete": "Willst du die Daten wirklich löschen?",
+        "success-delete": "Die Daten wurden erfolgreich gelöscht.",
+        "error-delete": "Es ist ein Fehler beim Löschen aufgetreten."
+    },
+    "general": {
+        "cancel": "abbrechen",
+        "ok": "ok"
+    },
+    "languages": {
+        "german": "deutsch",
+        "english": "englisch",
+        "french": "französisch"
+    }
+}

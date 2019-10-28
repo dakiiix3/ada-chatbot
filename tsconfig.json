@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noEmitHelpers": true,
+        "noEmitOnError": true,
+        "lib": [
+            "es6",
+            "dom",
+            "es2015.iterable"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "~/*": [
+                "src/*"
+            ],
+            "*": [
+                "./node_modules/*"
+            ],
+            "api-ai-javascript/*": ["node_modules/api-ai-javascript/es6/*"]     // workaround wegen bug: https://github.com/dialogflow/dialogflow-javascript-client/issues/99
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "platforms"
+    ]
+}

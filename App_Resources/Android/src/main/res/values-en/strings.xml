@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="_languages_french_ZUMLDp">"french"</string>
+  <string name="_languages_english_sa01i">"english"</string>
+  <string name="_languages_german_ZTyPnM">"german"</string>
+  <string name="_general_ok_m3vTb">"ok"</string>
+  <string name="_general_cancel_Z2smY">"cancel"</string>
+  <string name="_settings_error_delete_2hulDy">"Es ist ein Fehler beim Löschen aufgetreten."</string>
+  <string name="_settings_success_delete_2qXhoQ">"Die Daten wurden erfolgreich gelöscht."</string>
+  <string name="_settings_question_delete_21gOIK">"Willst du die Daten wirklich löschen?"</string>
+  <string name="_settings_confirm_delete_Z1KUPLc">"confirm delete"</string>
+  <string name="_settings_select_language_2nndA1">"select language"</string>
+  <string name="_settings_save_ZKTcdi">"save"</string>
+  <string name="_settings_delete_data_nAe1b">"delete data"</string>
+  <string name="_settings_language_1HaQ6D">"language"</string>
+  <string name="_settings_messages_Z20Qc38">"number of messages"</string>
+  <string name="_settings_voice_1AauDH">"Sprachausgabe"</string>
+  <string name="_messages_new_Z1uGO1C">"new message!"</string>
+  <string name="_messages_welcome_ZHpBJ2">"Hey, ich bin Ada, dein persönlicher Assistent während  der Zustellung. Wie kann ich dir weiterhelfen? Halte eine Nachricht länger gedrückt, um sie vorgelesen zu bekommen."</string>
+  <string name="_error_connection_2biTe">"Ich kann dir leider nicht antworten. Du musst dich wieder mit dem Internet verbinden. Erst dann kann ich wieder deine Anfragen beantworten."</string>
+  <string name="_app_name_1k3Sbz">"Ada"</string>
+  <string name="app_name">"Ada"</string>
+  <string name="title_activity_kimera">"Ada"</string>
+</resources>
