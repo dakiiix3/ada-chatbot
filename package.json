@@ -27,7 +27,7 @@
         "dialogflow": "^0.10.3",
         "moment": "^2.24.0",
         "native": "^0.3.3",
-        "nativescript": "^6.1.2",
+        "nativescript": "^8.5.3",
         "nativescript-angular": "~8.2.0",
         "nativescript-feedback": "^1.3.11",
         "nativescript-localize": "^4.2.0",
